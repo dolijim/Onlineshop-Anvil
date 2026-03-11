@@ -1,0 +1,26 @@
+components:
+- components:
+  - event_bindings: {}
+    layout_properties: {}
+    name: button_produkte
+    properties: {text: Produkte}
+    type: Button
+  - event_bindings: {}
+    layout_properties: {}
+    name: button_bestellungen
+    properties: {text: Bestellungen}
+    type: Button
+  - event_bindings: {}
+    layout_properties: {}
+    name: button_kunden
+    properties: {text: Kunden}
+    type: Button
+  layout_properties: {slot: default}
+  name: data_grid_1
+  properties:
+    columns: []
+  type: DataGrid
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

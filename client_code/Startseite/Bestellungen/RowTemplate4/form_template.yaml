@@ -1,0 +1,8 @@
+components:
+- event_bindings: {}
+  layout_properties: {column: MBUEKX}
+  name: button_zahlung_anzeigen
+  properties: {text: Anzeigen}
+  type: Button
+container: {type: DataRowPanel}
+is_package: true
