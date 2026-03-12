@@ -17,3 +17,22 @@ import anvil.server
 #   print("Hello, " + name + "!")
 #   return 42
 #
+
+import anvil.server
+import sqlite3
+
+@anvil.server.callable
+def get_bestellungen():
+  conn = sqlite3.connect("shop.db")
+  cursor = conn.cursor()
+
+  cursor.execute("""
+        SELECT bestell_id, kunden_id, datum, zahlung
+        FROM bestellungen
+    """)
+
+  rows = cursor.fetchall()
+
+  conn.close()
+
+  return rows
