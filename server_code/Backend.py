@@ -1,9 +1,10 @@
-import anvil.files
-from anvil.files import data_files
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import anvil.files
+from anvil.files import data_files
 import anvil.server
+import sqlite3
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
@@ -18,21 +19,19 @@ import anvil.server
 #   return 42
 #
 
-import anvil.server
-import sqlite3
+@anvil.server.callable
+def query_database(query: str):
+  with sqlite3.connect(data_files["shop.db"]) as conn:
+    cur = conn.cursor()
+    result = cur.execute(query).fetchall()
+  return result
+
 
 @anvil.server.callable
-def get_bestellungen():
-  conn = sqlite3.connect("shop.db")
-  cursor = conn.cursor()
+def query_database_dict(query: str):
+  with sqlite3.connect(data_files["shop.db"]) as conn:
+    conn.row_factory = sqlite3.Row
+    cur = conn.cursor()
+    result = cur.execute(query).fetchall()
+  return [dict(row) for row in result]
 
-  cursor.execute("""
-        SELECT bestell_id, kunden_id, datum, zahlung
-        FROM bestellungen
-    """)
-
-  rows = cursor.fetchall()
-
-  conn.close()
-
-  return rows

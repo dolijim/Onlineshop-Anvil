@@ -1,7 +1,6 @@
 components:
-- event_bindings: {}
-  layout_properties: {column: MBUEKX}
-  name: button_zahlung_anzeigen
+- layout_properties: {column: OVICWB}
+  name: button_zahlung
   properties: {text: Anzeigen}
   type: Button
 container: {type: DataRowPanel}

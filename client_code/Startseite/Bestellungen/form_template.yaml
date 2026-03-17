@@ -3,14 +3,14 @@ components:
   - name: repeating_panel_1
     properties: {item_template: Startseite.Bestellungen.RowTemplate4}
     type: RepeatingPanel
-  layout_properties: {grid_position: 'QKJVCX,IAYTZO'}
+  layout_properties: {grid_position: 'OTPOMN,GJWCSR'}
   name: data_grid_1
   properties:
     columns:
-    - {data_key: column_1, id: JKSDUP, title: Bestell - ID}
-    - {data_key: column_2, id: VJQQOR, title: Kunden - ID}
+    - {data_key: column_1, id: JKSDUP, title: Bestell_ID}
+    - {data_key: column_2, id: VJQQOR, title: Kunden_ID}
     - {data_key: column_3, id: OJLQEN, title: Datum}
-    - {data_key: column_1, id: MBUEKX, title: Zahlung}
+    - {data_key: column_4, id: OVICWB, title: Zahlung}
   type: DataGrid
 container: {type: ColumnPanel}
 is_package: true
