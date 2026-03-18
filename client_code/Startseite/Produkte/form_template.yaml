@@ -1,3 +1,20 @@
-components: []
+components:
+- components:
+  - name: repeating_panel_1
+    properties: {item_template: Startseite.Produkte.RowTemplate7}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'OJCMUF,TGADJO'}
+  name: data_grid_1
+  properties:
+    columns:
+    - {data_key: column_1, id: JKSDUP, title: Column 1}
+    - {data_key: column_2, id: VJQQOR, title: Column 2}
+    - {data_key: column_3, id: OJLQEN, title: Column 3}
+  type: DataGrid
+- event_bindings: {}
+  layout_properties: {grid_position: 'BQWARD,AEWYRD'}
+  name: button_startseite_von_produkte
+  properties: {text: <-- Startseite}
+  type: Button
 container: {type: ColumnPanel}
 is_package: true

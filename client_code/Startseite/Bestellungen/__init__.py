@@ -12,3 +12,7 @@ class Bestellungen(BestellungenTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  @handle("button_startseite_von_bestellungen", "click")
+  def button_startseite_von_bestellungen_click(self, **event_args):
+    open_form("Startseite", row_dict=self.item)

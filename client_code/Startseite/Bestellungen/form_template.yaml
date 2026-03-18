@@ -12,5 +12,10 @@ components:
     - {data_key: column_3, id: OJLQEN, title: Datum}
     - {data_key: column_4, id: OVICWB, title: Zahlung}
   type: DataGrid
+- event_bindings: {}
+  layout_properties: {grid_position: 'ATVCDL,NODRFL'}
+  name: button_startseite_von_bestellungen
+  properties: {text: <-- Startseite}
+  type: Button
 container: {type: ColumnPanel}
 is_package: true

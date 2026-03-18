@@ -12,3 +12,8 @@ class Produkte(ProdukteTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  @handle("button_startseite_von_produkte", "click")
+  def button_startseite_von_produkte_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form("Startseite", row_dict=self.item)

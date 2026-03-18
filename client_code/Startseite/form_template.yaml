@@ -1,4 +1,8 @@
 components:
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {align: center, text: Onlineshop}
+  type: Label
 - components:
   - event_bindings: {}
     layout_properties: {}
@@ -15,7 +19,7 @@ components:
     name: button_kunden
     properties: {text: Kunden}
     type: Button
-  layout_properties: {slot: default}
+  layout_properties: {slot: left-nav}
   name: data_grid_1
   properties:
     columns: []
