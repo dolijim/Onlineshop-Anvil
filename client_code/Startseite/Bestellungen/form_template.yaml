@@ -11,7 +11,7 @@ components:
     - {data_key: Bestell_ID, id: JKSDUP, title: Bestell_ID}
     - {data_key: Kunden_ID, id: VJQQOR, title: Kunden_ID}
     - {data_key: Datum, id: OJLQEN, title: Datum}
-    - {data_key: column_4, id: OVICWB, title: Zahlung}
+    - {data_key: column_4, id: OVICWB, title: Details}
   type: DataGrid
 - event_bindings: {}
   layout_properties: {grid_position: 'ATVCDL,NODRFL'}

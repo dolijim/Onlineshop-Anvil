@@ -29,6 +29,10 @@ components:
   properties:
     columns: []
   type: DataGrid
+- layout_properties: {slot: default}
+  name: label_2
+  properties: {align: center, bold: false, italic: false, text: Herzlich Wilkommen zum Super Duper Onlineshop, underline: false}
+  type: Label
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate

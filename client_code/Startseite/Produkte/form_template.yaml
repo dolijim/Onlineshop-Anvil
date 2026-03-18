@@ -1,15 +1,17 @@
 components:
 - components:
-  - name: repeating_panel_1
+  - name: repeating_panel_produkte
     properties: {item_template: Startseite.Produkte.RowTemplate7}
     type: RepeatingPanel
   layout_properties: {grid_position: 'OJCMUF,TGADJO'}
   name: data_grid_1
   properties:
     columns:
-    - {data_key: column_1, id: JKSDUP, title: Column 1}
-    - {data_key: column_2, id: VJQQOR, title: Column 2}
-    - {data_key: column_3, id: OJLQEN, title: Column 3}
+    - {data_key: Produkt_ID, id: JKSDUP, title: Produkt_ID}
+    - {data_key: Name, id: VJQQOR, title: Name}
+    - {data_key: Kategorie, id: OJLQEN, title: Kategorie}
+    - {data_key: Preis, id: XSRAUJ, title: Preis (in €)}
+    - {data_key: Lieferant_ID, id: UBXJRF, title: Lieferant_ID}
   type: DataGrid
 - event_bindings: {}
   layout_properties: {grid_position: 'BQWARD,AEWYRD'}

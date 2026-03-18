@@ -18,17 +18,3 @@ class Verkaufsuebersicht(VerkaufsuebersichtTemplate):
   def button_startseite_von_verkaufsuebersicht_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("Startseite", row_dict=self.item)
-
-  def __init__(self, **properties):
-    self.init_components(**properties)
-
-    daten = anvil.server.call('meist_verkaufte_produkte')
-
-    namen = [d[0] for d in daten]
-    werte = [d[1] for d in daten]
-
-    fig = go.Figure(
-      data=[go.Bar(x=namen, y=werte)]
-    )
-
-    self.diagramm_meist_verkaufte_produkte.figure = fig

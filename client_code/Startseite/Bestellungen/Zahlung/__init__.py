@@ -13,6 +13,9 @@ class Zahlung(ZahlungTemplate):
 
     print(row_dict)
 
+    return_values = anvil.server.call('get_Bestellung_Details', row_dict["Bestell_ID"])
+    print(return_values)
+
     # Any code you write here will run before the form opens.
 
   @handle("button_startseite_von_zahlung", "click")
