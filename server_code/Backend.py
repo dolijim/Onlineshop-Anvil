@@ -22,7 +22,6 @@ def get_Bestellung_Details(Bestell_ID:int):
     """).fetchall()
     return [dict(row) for row in result]
 
-
 @anvil.server.callable
 def get_Produkt():
   with sqlite3.connect(data_files['shop.db']) as conn:
@@ -33,7 +32,6 @@ def get_Produkt():
     """).fetchall()
     return [dict(row) for row in result]
 
-
 @anvil.server.callable
 def get_Kunden():
   with sqlite3.connect(data_files['shop.db']) as conn:
@@ -43,3 +41,27 @@ def get_Kunden():
         SELECT Kunden_ID, Name, Adresse FROM Kunde
     """).fetchall()
     return [dict(row) for row in result]
+
+@anvil.server.callable
+def get_verkäufe_nach_kategorie():
+  with sqlite3.connect(data_files['shop.db']) as conn:
+    conn.row_factory = sqlite3.Row
+    cur = conn.cursor()
+    result = cur.execute("""
+        SELECT Name, COUNT(*) AS Anzahl FROM Produkt GROUP BY Name
+    """).fetchall()
+    produkte = [row['Name'] for row in result]
+    anzahlen = [row['Anzahl'] for row in result]
+    return produkte, anzahlen
+
+@anvil.server.callable
+def get_umsatz_nach_kategorie():
+  with sqlite3.connect(data_files['shop.db']) as conn:
+    conn.row_factory = sqlite3.Row
+    cur = conn.cursor()
+    result = cur.execute("""
+        SELECT Name, SUM(Preis) AS Umsatz FROM Produkt GROUP BY Name
+    """).fetchall()
+    produkte = [row['Name'] for row in result]
+    umsaetze = [row['Umsatz'] for row in result]
+    return produkte, umsaetze
