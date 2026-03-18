@@ -12,3 +12,8 @@ class RowTemplate4(RowTemplate4Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  @handle("button_zahlung", "click")
+  def button_zahlung_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Startseite.Bestellungen.Zahlung', self.item)

@@ -1,15 +1,16 @@
 components:
 - components:
-  - name: repeating_panel_1
+  - name: repeating_panel_bestellungen
     properties: {item_template: Startseite.Bestellungen.RowTemplate4}
     type: RepeatingPanel
+  event_bindings: {}
   layout_properties: {grid_position: 'OTPOMN,GJWCSR'}
   name: data_grid_1
   properties:
     columns:
-    - {data_key: column_1, id: JKSDUP, title: Bestell_ID}
-    - {data_key: column_2, id: VJQQOR, title: Kunden_ID}
-    - {data_key: column_3, id: OJLQEN, title: Datum}
+    - {data_key: Bestell_ID, id: JKSDUP, title: Bestell_ID}
+    - {data_key: Kunden_ID, id: VJQQOR, title: Kunden_ID}
+    - {data_key: Datum, id: OJLQEN, title: Datum}
     - {data_key: column_4, id: OVICWB, title: Zahlung}
   type: DataGrid
 - event_bindings: {}

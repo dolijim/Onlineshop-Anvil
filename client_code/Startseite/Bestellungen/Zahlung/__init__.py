@@ -7,9 +7,11 @@ from anvil.tables import app_tables
 
 
 class Zahlung(ZahlungTemplate):
-  def __init__(self, **properties):
+  def __init__(self, row_dict, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+
+    print(row_dict)
 
     # Any code you write here will run before the form opens.
 

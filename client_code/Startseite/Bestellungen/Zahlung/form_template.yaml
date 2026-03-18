@@ -7,9 +7,11 @@ components:
   name: data_grid_1
   properties:
     columns:
-    - {data_key: column_1, id: JKSDUP, title: Column 1}
-    - {data_key: column_2, id: VJQQOR, title: Column 2}
-    - {data_key: column_3, id: OJLQEN, title: Column 3}
+    - {data_key: Zahlungs_ID, id: JKSDUP, title: Zahlungs_ID}
+    - {data_key: Bestell_ID, id: VJQQOR, title: Bestell_ID}
+    - {data_key: column_3, id: OJLQEN, title: Produkt}
+    - {data_key: column_1, id: OYWUYR, title: Anzahl Produkte}
+    - {data_key: column_2, id: GETRDX, title: Gesamtbetrag}
   type: DataGrid
 - event_bindings: {}
   layout_properties: {grid_position: 'PFBWZW,ASSWVP'}
