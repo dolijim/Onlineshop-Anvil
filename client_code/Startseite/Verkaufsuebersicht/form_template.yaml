@@ -1,6 +1,14 @@
 components:
-- layout_properties: {grid_position: 'LGFYHV,TDMAFA'}
-  name: diagramm_meist_verkaufte_produkte
+- layout_properties: {grid_position: 'QRWFWW,UCTWIM'}
+  name: label_1
+  properties: {align: center, bold: true, font: '', font_size: 30, underline: true}
+  type: Label
+- layout_properties: {grid_position: 'KVNPKP,ZZVHPQ'}
+  name: plot_1
+  properties: {}
+  type: Plot
+- layout_properties: {grid_position: 'KVNPKP,FWVIQW'}
+  name: plot_2
   properties: {}
   type: Plot
 - event_bindings: {}
