@@ -13,9 +13,9 @@ class Zahlung(ZahlungTemplate):
 
     print(row_dict)
 
-    return_values = anvil.server.call('get_Bestellung_Details', row_dict["Bestell_ID"])
-    print(return_values)
-
+    return_value = anvil.server.call('get_Bestellung_Details', row_dict["Bestell_ID"])
+    self.repeating_panel_zahlungen.items = return_value
+    
     # Any code you write here will run before the form opens.
 
   @handle("button_startseite_von_zahlung", "click")
@@ -27,3 +27,10 @@ class Zahlung(ZahlungTemplate):
   def button_bestellungen_von_zahlung_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("Startseite.Bestellungen", row_dict=self.item)
+
+  @handle("data_grid_1", "show")
+  def data_grid_1_show(self, **event_args):
+    """This method is called when the data grid is shown on the screen"""
+    
+
+

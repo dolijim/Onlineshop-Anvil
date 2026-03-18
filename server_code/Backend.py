@@ -18,7 +18,7 @@ def get_Bestellung_Details(Bestell_ID:int):
     conn.row_factory = sqlite3.Row
     cur = conn.cursor()
     result = cur.execute(f"""
-        SELECT b.Bestell_ID, b.Datum, b.Kunden_ID, k.Name, k.Adresse, p.Name, p.Preis, z.Gesamtbetrag FROM Bestellung b JOIN Zahlung z on z.Bestell_ID = b.Bestell_ID JOIN bestellung_produkt bp ON bp.Bestell_ID = b.Bestell_ID JOIN Produkt p ON p.Produkt_ID = bp.Produkt_ID JOIN Kunde k ON k.Kunden_ID = b.Kunden_ID WHERE b.Bestell_ID = {Bestell_ID};
+        SELECT z.Zahlungs_ID, b.Bestell_ID, p.Name, p.Preis, z.Gesamtbetrag FROM Bestellung b JOIN Zahlung z on z.Bestell_ID = b.Bestell_ID JOIN bestellung_produkt bp ON bp.Bestell_ID = b.Bestell_ID JOIN Produkt p ON p.Produkt_ID = bp.Produkt_ID JOIN Kunde k ON k.Kunden_ID = b.Kunden_ID WHERE b.Bestell_ID = {Bestell_ID};
     """).fetchall()
     return [dict(row) for row in result]
 

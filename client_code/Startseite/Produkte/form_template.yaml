@@ -11,8 +11,8 @@ components:
     - {data_key: Name, id: VJQQOR, title: Name}
     - {data_key: Kategorie, id: OJLQEN, title: Kategorie}
     - {data_key: Preis, id: XSRAUJ, title: Preis (in €)}
-    - {data_key: Lieferant_Name, id: UBXJRF, title: Lieferant Name}
-    - {data_key: Lieferant_ID, id: LSUCKK, title: Lieferant_ID}
+    - {data_key: Name_Lieferant, id: UBXJRF, title: Lieferant Name}
+    - {data_key: Lieferanten_ID, id: LSUCKK, title: Lieferant_ID}
   type: DataGrid
 - event_bindings: {}
   layout_properties: {grid_position: 'BQWARD,AEWYRD'}

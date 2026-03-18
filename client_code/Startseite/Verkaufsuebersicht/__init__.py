@@ -20,14 +20,7 @@ class Verkaufsuebersicht(VerkaufsuebersichtTemplate):
     open_form("Startseite", row_dict=self.item)
 
 
-  def __init__(self, **properties):
-    self.init_components(**properties)
 
-    self.plot_1.data = [{
-      "labels": ["Äpfel", "Bananen", "Kirschen"],
-      "values": [10, 20, 30],
-      "type": "pie"
-    }]
 
   def __init__(self, **properties):
     self.init_components(**properties)
@@ -40,7 +33,7 @@ class Verkaufsuebersicht(VerkaufsuebersichtTemplate):
       "labels": ["Äpfel", "Bananen", "Kirschen"],
       "values": [10, 20, 30],
       "type": "pie",
-      "textinfo": "label+percent"
+      "textinfo": "label"
     }]
 
     self.plot_1.layout = {
@@ -57,7 +50,7 @@ class Verkaufsuebersicht(VerkaufsuebersichtTemplate):
       "labels": ["Rot", "Blau", "Grün"],
       "values": [15, 25, 10],
       "type": "pie",
-      "textinfo": "label+percent"
+      "textinfo": "label"
     }]
 
     self.plot_2.layout = {
