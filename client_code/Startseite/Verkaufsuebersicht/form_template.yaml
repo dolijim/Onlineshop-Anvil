@@ -1,0 +1,12 @@
+components:
+- layout_properties: {grid_position: 'LGFYHV,TDMAFA'}
+  name: diagramm_meist_verkaufte_produkte
+  properties: {}
+  type: Plot
+- event_bindings: {}
+  layout_properties: {grid_position: 'KUUQHR,NBGUBQ'}
+  name: button_startseite_von_verkaufsuebersicht
+  properties: {text: <-- Startseite}
+  type: Button
+container: {type: ColumnPanel}
+is_package: true

@@ -16,6 +16,7 @@ unique_ids:
     Startseite.RowTemplate1: '1772620263583183615113455.3914'
     Startseite.RowTemplate2: '1773221333418130726314689.97542'
     Startseite.RowTemplate3: '1773221345180452617781035.585'
+    Startseite.Verkaufsuebersicht: '1773818473827877356283692.9308'
   modules: {}
   scripts: {}
   server_modules:

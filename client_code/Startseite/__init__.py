@@ -26,3 +26,8 @@ class Startseite(StartseiteTemplate):
   def button_kunden_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("Startseite.Kunden", row_dict=self.item)
+
+  @handle("button_verkaufsuebersicht", "click")
+  def button_verkaufsuebersicht_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form("Startseite.Verkaufsuebersicht", row_dict=self.item)

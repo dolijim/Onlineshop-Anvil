@@ -19,6 +19,11 @@ components:
     name: button_kunden
     properties: {text: Kunden}
     type: Button
+  - event_bindings: {}
+    layout_properties: {}
+    name: button_verkaufsuebersicht
+    properties: {text: Verkausübersicht}
+    type: Button
   layout_properties: {slot: left-nav}
   name: data_grid_1
   properties:
